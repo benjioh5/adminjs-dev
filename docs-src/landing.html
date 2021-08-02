@@ -443,6 +443,41 @@
   </div>
 </div>
 
+<div class="open-source">
+  <div class="container">
+    <h1>Open source communnity</h1>
+    <h3>
+      Subscribe to the AdminJS community newsletter for regular development
+      updates and useful materials
+    </h3>
+    <form
+      action="http://opensource.softwarebrothers.co/add_subscriber"
+      method="post"
+      id="revue-form"
+      name="revue-form"
+      target="_blank"
+      class="subscribe"
+    >
+      <input
+        class="input revue-form-field"
+        type="email"
+        name="member[email]"
+        id="member_email"
+        placeholder="Your email..."
+      />
+      <button
+        class="button"
+        type="submit"
+        value="Subscribe"
+        name="member[subscribe]"
+        id="member_submit"
+      >
+        Subscribe
+      </button>
+    </form>
+  </div>
+</div>
+
 <div class="white-oval">
   <div class="container">
     <div class="columns header-message">
@@ -1059,14 +1094,14 @@
     return false;
   });
 
-  $('.feature').css('display', 'none');
+  $('.features').find('.feature').css('display', 'none');
   $('#feature-1').css('display', 'flex');
   $('.feature-name').removeClass('selected');
   $('#feature-name-1').addClass('selected');
   const featuresSelector = $('#features-selector');
   featuresSelector.change(() => {
     const selectedValue = $("input[name='features']:checked").val();
-    $('.feature').css('display', 'none');
+    $('.features').find('.feature').css('display', 'none');
     $('#feature-' + selectedValue).css('display', 'flex');
     $('.feature-name').removeClass('selected');
     $('#feature-name-' + selectedValue).addClass('selected');
