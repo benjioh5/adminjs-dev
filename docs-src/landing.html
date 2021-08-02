@@ -209,6 +209,143 @@
   </div>
 </div>
 
+<div class="features">
+  <h1>Filled with tones of features</h1>
+  <h3>
+    The out-of-the-box version of AdminJS is pretty powerful, but its in-depth
+    customizability is where it really shines. With a basic knowledge of React
+    and Node.js, you can change nearly every behaviour of your admin panel.
+  </h3>
+  <div class="features-content">
+    <div id="features-selector" class="features-list">
+      <label>
+        <input type="radio" name="features" value="1" checked />
+        <h2 id="feature-name-1" class="feature-name">CRUD</h2>
+      </label>
+      <label>
+        <input type="radio" name="features" value="2" />
+        <h2 id="feature-name-2" class="feature-name">Data Sources</h2>
+      </label>
+      <label>
+        <input type="radio" name="features" value="3" />
+        <h2 id="feature-name-3" class="feature-name">Filtering</h2>
+      </label>
+      <label>
+        <input type="radio" name="features" value="4" />
+        <h2 id="feature-name-4" class="feature-name">Custom Actions</h2>
+      </label>
+      <label>
+        <input type="radio" name="features" value="5" checked />
+        <h2 id="feature-name-5" class="feature-name">Roles</h2>
+      </label>
+      <label>
+        <input type="radio" name="features" value="6" />
+        <h2 id="feature-name-6" class="feature-name">Customization</h2>
+      </label>
+      <label>
+        <input type="radio" name="features" value="7" />
+        <h2 id="feature-name-7" class="feature-name">Design System</h2>
+      </label>
+      <label>
+        <input type="radio" name="features" value="8" />
+        <h2 id="feature-name-8" class="feature-name">Features</h2>
+      </label>
+    </div>
+    <div id="feature-1" class="feature">
+      <div class="description-container">
+        <h1>CRUD</h1>
+        <h2>
+          With AdminJS you can Create, Read, Update and Delete all of your
+          resources, no matter where they come from. Thanks to the tight
+          integration with your ORM/ODM, AdminJS picks up all the validation
+          rules, data types and relationships.
+        </h2>
+      </div>
+      <div class="image-container">
+        <img src="./images/feature-crud.png" />
+      </div>
+    </div>
+    <div id="feature-2" class="feature">
+      <div>
+        <h1>Data Sources</h1>
+        <h2>
+          Whether you are working with SQL or NoSQL databases, REST or GraphQL APIs, AdminJS is designed to become a data centralization tool for your project and thus is able to gather data from multiple sources.
+        </h2>
+      </div>
+      <div class="image-container">
+        <img src="./images/feature-data-sources.png" />
+      </div>
+    </div>
+    <div id="feature-3" class="feature">
+      <div class="description-container">
+        <h1>Filtering</h1>
+        <h2>
+          With AdminJS, you can easily find any record inside your dataset. Everything thanks to the advanced filters panel which is able to narrow your search according to multiple criteria.
+        </h2>
+      </div>
+      <div class="image-container">
+        <img src="./images/feature-filtering.png" />
+      </div>
+    </div>
+    <div id="feature-4" class="feature">
+      <<div class="description-container">
+        <h1>Custom Actions</h1>
+        <h2>
+          If the predefined set of actions doesn’t fulfil all of your needs, you can effortlessly implement your custom business logic by assigning custom-build actions to all of your resources.
+          </br>
+          </br>
+          Actions can be added for a single record (publish action), multiple records (bulk delete action) or even an entire resource (export action).
+        </h2>
+      </div>
+      <div class="image-container">
+        <img src="./images/feature-custom-actions.png" />
+      </div>
+    </div>
+    <div id="feature-5" class="feature">
+      <div class="description-container">
+        <h1>Roles</h1>
+        <h2>
+          AdminJS offers authentication and role-based access control (RBAC) out of the box. You can easily restrict actions for every resource or even for a particular record. Restricted users won’t be able to see/modify things they shouldn’t.
+        </h2>
+      </div>
+      <div class="image-container">
+        <img src="./images/feature-roles.png" />
+      </div>
+    </div>
+    <div id="feature-6" class="feature">
+      <div class="description-container">
+        <h1>Customisation</h1>
+        <h2>
+          Developed with customization in mind, you can modify every part of AdminJS. Possibilities are limitless. Want to change colours, inject custom CSS, or change how particular components are rendered? Feel free to do just that, simply fork it and adjust to your needs.        </h2>
+      </div>
+      <div class="image-container">
+        <img src="./images/feature-customization.png" />
+      </div>
+    </div>
+    <div id="feature-7" class="feature">
+      <div class="description-container">
+        <h1>Design System</h1>
+        <h2>
+          AdminJS comes with a full-featured React-based Design System. With it, you can build any layout using any UI element you like, and since it’s build with styled components — you can change the look and feel of each and every part.        </h2>
+      </div>
+      <div class="image-container">
+        <img src="./images/feature-design-system.png" />
+      </div>
+    </div>
+    <div id="feature-8" class="feature">
+      <div class="description-container">
+        <h1>Features</h1>
+        <h2>
+          Features are the way of enhancing AdminJS. They are a set of settings which can be applied to any resource. You can create your own features or use features created by our awesome open-source community.
+        </h2>
+      </div>
+      <div class="image-container">
+        <img src="./images/feature-features.png" />
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="white-oval">
   <div class="container">
     <div class="columns header-message">
@@ -824,4 +961,17 @@
 
     return false;
   });
+
+  $('.feature').css('display', 'none');
+  $('#feature-1').css('display', 'flex');
+  $('.feature-name').removeClass('selected');
+  $('#feature-name-1').addClass('selected');
+  const featuresSelector = $('#features-selector');
+  featuresSelector.change(() => {
+    const selectedValue = $("input[name='features']:checked").val();
+    $('.feature').css('display', 'none');
+    $('#feature-' + selectedValue).css('display', 'flex');
+    $('.feature-name').removeClass('selected');
+    $('#feature-name-' + selectedValue).addClass('selected');
+  })
 </script>
