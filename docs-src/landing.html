@@ -478,6 +478,73 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="testimonials">
+    <h1>Not convinced yet?</h1>
+    <h3>Read what our community says about AdminJS</h3>
+    <div class="testimonials-carousel">
+      <img id="prev-testimonial" src="./images/icon-arrow-left.svg" />
+      <a
+        id="testimonial-0"
+        class="testimonial"
+        href="https://youtu.be/7Ujn7g1JF1Q"
+        target="_blank"
+      >
+        <i class="fab fa-youtube"></i>
+        <h5>"I had an unrealistic deadline and this helped me a lot."</h5>
+        <span>SUKHRAJ SINGH</span>
+      </a>
+      <a
+        id="testimonial-1"
+        class="testimonial"
+        href="https://github.com/SoftwareBrothers/adminjs/issues/141"
+        target="_blank"
+      >
+        <i class="fab fa-github"></i>
+        <h5>
+          "Great work so far, the tool is incredibly easy to get setup and
+          understand outside of this issue."
+        </h5>
+        <span>#141: N8STOWELL82</span>
+      </a>
+      <a
+        id="testimonial-2"
+        class="testimonial"
+        href="https://www.reddit.com/r/node/comments/a8enhs/adminbro_just_got_an_option_to_modify_its/"
+        target="_blank"
+      >
+        <i class="fab fa-reddit"></i>
+        <h5>
+          "Very nice UI. You did a great job ! Hope to see this project being
+          used by a lot of people."
+        </h5>
+        <span>MOJODOJODJO</span>
+      </a>
+      <a
+        id="testimonial-3"
+        class="testimonial"
+        href="https://youtu.be/7Ujn7g1JF1Q"
+        target="_blank"
+      >
+        <i class="fab fa-youtube"></i>
+        <h5>"Project to be delivered in just 4 days... you saved me !!!"</h5>
+        <span>JIMMY R.</span>
+      </a>
+      <a
+        id="testimonial-4"
+        class="testimonial"
+        href="https://github.com/SoftwareBrothers/adminjs/issues/160"
+        target="_blank"
+      >
+        <i class="fab fa-github"></i>
+        <h5>"Thanks for an awesome piece of software!"</h5>
+        <span>#160: DOUBLETUNA</span>
+      </a>
+      <img id="next-testimonial" src="./images/icon-arrow-right.svg" />
+    </div>
+  </div>
+</div>
+
 <div class="white-oval">
   <div class="container">
     <div class="columns header-message">
@@ -1105,5 +1172,42 @@
     $('#feature-' + selectedValue).css('display', 'flex');
     $('.feature-name').removeClass('selected');
     $('#feature-name-' + selectedValue).addClass('selected');
+  });
+
+  $('#testimonial-3').css('display', 'none');
+  $('#testimonial-4').css('display', 'none');
+  $('#prev-testimonial').addClass('disabled');
+  let index = 0;
+  $('#next-testimonial').click(() => {
+    if (index === 2) {
+      return;
+    }
+    index++;
+
+    $('.testimonial').css('display', 'none');
+    $('#testimonial-' + (index % 5)).css('display', 'flex');
+    $('#testimonial-' + ((index + 1) % 5)).css('display', 'flex');
+    $('#testimonial-' + ((index + 2) % 5)).css('display', 'flex');
+
+    $('#prev-testimonial').removeClass('disabled');
+    if (index === 2) {
+      $('#next-testimonial').addClass('disabled');
+    }
+  });
+  $('#prev-testimonial').click(() => {
+    if (index === 0) {
+      return;
+    }
+    index--;
+
+    $('.testimonial').css('display', 'none');
+    $('#testimonial-' + (index % 5)).css('display', 'flex');
+    $('#testimonial-' + ((index + 1) % 5)).css('display', 'flex');
+    $('#testimonial-' + ((index + 2) % 5)).css('display', 'flex');
+
+    $('#next-testimonial').removeClass('disabled');
+    if (index === 0) {
+      $('#prev-testimonial').addClass('disabled');
+    }
   });
 </script>
