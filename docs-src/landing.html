@@ -31,7 +31,7 @@
   <div><img src="./images/laptop.png" /></div>
 </div>
 
-<div class="container quick-installation">
+<div id="installation" class="container quick-installation">
   <h1>Quick instalation</h1>
   <h3>Install it from NPM</h3>
   <div class="command">
@@ -79,7 +79,7 @@
   </a>
 </div>
 
-<div class="how-it-works">
+<div id="how-it-works" class="how-it-works">
   <div class="container">
     <h1>How it works?</h1>
     <div class="diagram">
@@ -209,7 +209,7 @@
   </div>
 </div>
 
-<div class="features">
+<div id="features" class="features">
   <h1>Filled with tones of features</h1>
   <h3>
     The out-of-the-box version of AdminJS is pretty powerful, but its in-depth
@@ -478,7 +478,7 @@
   </div>
 </div>
 
-<div class="container">
+<div id="testimonials" class="container">
   <div class="testimonials">
     <h1>Not convinced yet?</h1>
     <h3>Read what our community says about AdminJS</h3>
@@ -623,7 +623,67 @@
   </div>
 </div>
 
-<div class="white-oval">
+<div class="landing-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-column wide">
+        <img src="./images/adminjs-logo.svg" />
+        <h5>
+          AdminJS is auto-generated admin panel for your <b>Node.js</b> application
+          that allows you to manage all your data in one place.
+          </br>
+          </br>
+          Always open-source under the <b>MIT license</b>.
+        </h5>
+      </div>
+      <div class="footer-column">
+        <h3>Product</h3>
+        <a id="footer-installation-link">
+          Installation
+        </a>
+        <a id="footer-how-it-works-link">
+          How it works
+        </a>
+        <a id="footer-features-link">
+          Features
+        </a>
+        <a id="footer-testimonials-link">
+          Testimonials
+        </a>
+      </div>
+      <div class="footer-column">
+        <h3>AdminJS</h3>
+        <a href="https://adminbro.com/tutorial-customizing-resources.html">
+          Demo
+        </a>
+        <a href="https://adminbro.com/tutorial-customizing-resources.html">
+          Community
+        </a>
+        <a href="https://adminbro.com/tutorial-customizing-resources.html">
+          Enterprise
+        </a>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <a href="https://adminbro.com/tutorial-customizing-resources.html">
+          Contact us
+        </a>
+        <a href="https://adminbro.com/docs.html">
+          Documentation
+        </a>
+        <a href="https://adminbro.com/tutorial-installation-instructions.html">
+          Tutorials
+        </a>
+        <a href="https://github.com/SoftwareBrothers/adminjs">
+          GitHub
+        </a>
+      </div>
+    </div>
+    <h4>© AdminJS 2021. All rights reserved | Privacy Policy</h4>
+  </div>
+</div>
+
+<!-- <div class="white-oval">
   <div class="container">
     <div class="columns header-message">
       <div class="column">
@@ -1187,7 +1247,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <script>
   const nav = $('.top-nav');
@@ -1287,5 +1347,32 @@
     if (index === 0) {
       $('#prev-testimonial').addClass('disabled');
     }
+  });
+
+  const scrollToPosition = (elementId, offset) => {
+    const elem = document.getElementById(elementId);
+    const box = elem.getBoundingClientRect();
+    const body = document.getElementsByTagName('body')[0];
+    $('html, body').animate({ scrollTop: box.top + body.scrollTop + offset }, 'slow');
+  }
+
+  $('#footer-installation-link').click(() => {
+    scrollToPosition('installation', -200)
+    return false;
+  });
+
+  $('#footer-how-it-works-link').click(() => {
+    scrollToPosition('how-it-works', 80)
+    return false;
+  });
+
+  $('#footer-features-link').click(() => {
+    scrollToPosition('features', 80)
+    return false;
+  });
+
+  $('#footer-testimonials-link').click(() => {
+    scrollToPosition('testimonials', -120)
+    return false;
   });
 </script>
