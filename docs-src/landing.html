@@ -35,9 +35,12 @@
   <h1>Quick instalation</h1>
   <h3>Install it from NPM</h3>
   <div class="command">
-    <h4>$ npm install adminjs</h4>
-    <img src="./images/icon-copy.svg" />
+    <h4>npm install adminjs @adminjs/&lt;your framework&gt; @adminjs/&lt;your database adapter&gt;</h4>
+    <a id="copy-button" class="button blue-button copy-button">
+      <img class="copy-icon" src="./images/icon-copy.svg" />
+    </a>
   </div>
+  <h5><span class="example-label">Example:</span> npm install adminjs @adminjs/express @adminjs/typeorm</h5>
   <a
     class="button blue-button"
     href="https://adminbro.com/tutorial-installation-instructions.html"
@@ -1358,21 +1361,21 @@
 
   $('#footer-installation-link').click(() => {
     scrollToPosition('installation', -200)
-    return false;
   });
 
   $('#footer-how-it-works-link').click(() => {
     scrollToPosition('how-it-works', 80)
-    return false;
   });
 
   $('#footer-features-link').click(() => {
     scrollToPosition('features', 80)
-    return false;
   });
 
   $('#footer-testimonials-link').click(() => {
     scrollToPosition('testimonials', -120)
-    return false;
+  });
+
+  $('#copy-button').click(() => {
+    navigator.clipboard.writeText("npm install adminjs @adminjs/<your framework> @adminjs/<your database adapter>");
   });
 </script>
