@@ -2,7 +2,32 @@
   <div class="header-nav">
     <img class="logo" src="./images/adminjs-logo.svg" alt="adminjs"/>
     <div class="links">
-      <a id="header-documentation-link">Documentation <i class="fas fa-chevron-down"></i></a>
+      <div class="dropdown">
+        <a>Documentation <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <a href="https://adminbro.com/tutorial-installation-instructions.html">
+            Installation instructions
+          </a>
+          <a href="https://adminbro.com/tutorial-passing-resources.html">
+            Adding resources
+          </a>
+          <a href="https://adminbro.com/tutorial-customizing-resources.html">
+            Customize resources
+          </a>
+          <a href="https://adminbro.com/tutorial-actions.html">
+            Customize actions
+          </a>
+          <a href="https://adminbro.com/tutorial-writing-react-components.html">
+            Writing your own Components
+          </a>
+          <a href="https://adminbro.com/tutorial-features.html">
+            Using AdminBro features
+          </a>
+          <a href="https://adminbro.com/tutorial-custom-dashboard.html">
+            Customize dashboard
+          </a>
+        </div>
+      </div>
       <a>Enterprise</a>
     </div>
   </div>
@@ -719,7 +744,7 @@
       </div>
       <div class="footer-column">
         <h3>AdminJS</h3>
-        <a href="https://adminbro.com/tutorial-customizing-resources.html">
+        <a href="https://demo.adminjs.co/admin">
           Demo
         </a>
         <a href="https://adminbro.com/tutorial-customizing-resources.html">
@@ -1436,10 +1461,6 @@
 
   $('#footer-testimonials-link').click(() => {
     scrollToPosition('testimonials', -120)
-  });
-
-  $('#header-documentation-link').click(() => {
-    scrollToPosition('documentation', 0)
   });
 
   $('#copy-button').click(() => {
