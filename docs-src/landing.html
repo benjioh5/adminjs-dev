@@ -1,11 +1,27 @@
 <div class="header">
-  <a class="slack" href="https://join.slack.com/t/adminbro/shared_invite/zt-djsqxxpz-_YCS8UMtQ9Ade6DPuLR7Zw">
-    <img src="./images/slack-community.png" alt="slack community" />
-    <span>Join Slack Community</span>
+  <div class="header-nav">
+    <img class="logo" src="./images/adminjs-logo.svg" alt="adminjs"/>
+    <div class="links">
+      <a id="header-documentation-link">Documentation <i class="fas fa-chevron-down"></i></a>
+      <a>Enterprise</a>
+    </div>
+  </div>
+  <a class="badge" href="https://github.com/SoftwareBrothers/adminjs">
+    <div class="badge-label">
+      <i class="fab fa-github"></i>
+      <h4>Star</h4>
+    </div>
+    <h3 id="header-stargazers-count">...</h3>
   </a>
-  <a class="button demo" href="https://demo.adminjs.co/admin">
-    Demo
-  </a>
+  <div class="header-community">
+    <a class="slack" href="https://join.slack.com/t/adminbro/shared_invite/zt-djsqxxpz-_YCS8UMtQ9Ade6DPuLR7Zw">
+      <img class="avatars" src="./images/slack-community.png" alt="slack community" />
+      <span>Join Slack Community</span>
+    </a>
+    <a class="button demo" href="https://demo.adminjs.co/admin">
+      Demo
+    </a>
+  </div>
 </div>
 
 <div class="main-hero">
@@ -104,13 +120,13 @@
         </a>
         <div class="stargazers-count">
           <img src="./images/star.svg" alt="star" />
-          <h4 id="stargazers_count">...loading</h4>
+          <h4 id="stargazers-count">...loading</h4>
         </div>
       </div>
       <div class="weekly">
         <div class="weekly-count">
           <h5>Weekly Downloads</h5>
-          <h4 id="downloads_count">...loading</h4>
+          <h4 id="downloads-count">...loading</h4>
         </div>
       </div>
     </div>
@@ -396,7 +412,7 @@
   </div>
 </div>
 
-<div class="documentation">
+<div id="documentation" class="documentation">
   <div class="container">
     <h1>Documentation</h1>
     <div class="row">
@@ -1422,17 +1438,22 @@
     scrollToPosition('testimonials', -120)
   });
 
+  $('#header-documentation-link').click(() => {
+    scrollToPosition('documentation', 0)
+  });
+
   $('#copy-button').click(() => {
     navigator.clipboard.writeText("npm install adminjs @adminjs/<your framework> @adminjs/<your database adapter>");
   });
 
   $.ajax('https://api.github.com/repos/SoftwareBrothers/adminjs').then((res) => {
-    $('#stargazers_count').text(res.stargazers_count);
+    $('#stargazers-count').text(res.stargazers_count);
+    $('#header-stargazers-count').text((res.stargazers_count / 1000).toFixed(1) + 'k');
   });
 
   $.ajax('https://api.npmjs.org/downloads/point/last-week/adminjs').then((res) => {
     if (res.downloads) {
-      $('#downloads_count').text(res.downloads);
+      $('#downloads-count').text(res.downloads);
     }
   });
 </script>
