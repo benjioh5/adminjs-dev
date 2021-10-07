@@ -1,51 +1,84 @@
-<div class="header">
-  <div class="header-nav">
-    <img class="logo" src="./images/adminjs-logo.svg" alt="adminjs"/>
-    <div class="links">
-      <div class="dropdown">
-        <a>Documentation <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-content">
-          <a href="https://adminbro.com/tutorial-installation-instructions.html">
-            Installation instructions
-          </a>
-          <a href="https://adminbro.com/tutorial-passing-resources.html">
-            Adding resources
-          </a>
-          <a href="https://adminbro.com/tutorial-customizing-resources.html">
-            Customize resources
-          </a>
-          <a href="https://adminbro.com/tutorial-actions.html">
-            Customize actions
-          </a>
-          <a href="https://adminbro.com/tutorial-writing-react-components.html">
-            Writing your own Components
-          </a>
-          <a href="https://adminbro.com/tutorial-features.html">
-            Using AdminBro features
-          </a>
-          <a href="https://adminbro.com/tutorial-custom-dashboard.html">
-            Customize dashboard
-          </a>
+<div class="header columns is-mobile is-vcentered is-gapless">
+  <div class="column">
+    <div class="columns is-vcentered is-gapless">
+      <div class="column is-narrow">
+        <img class="logo" src="./images/adminjs-logo.svg" alt="adminjs"/>
+      </div>
+      <div class="column is-mobile-hidden">
+        <div class="header-nav">
+          <div class="dropdown is-hoverable">
+            <div class="dropdown-trigger">
+              <a class="header-link">Documentation <i class="fas fa-chevron-down"></i></a>
+            </div>
+            <div class="dropdown-menu" role="menu">
+              <div class="dropdown-content">
+                <div class="dropdown-item">
+                  <a href="https://adminbro.com/tutorial-installation-instructions.html">
+                    Installation instructions
+                  </a>
+                </div>
+                <div class="dropdown-item">
+                  <a href="https://adminbro.com/tutorial-passing-resources.html">
+                    Adding resources
+                  </a>
+                </div>
+                <div class="dropdown-item">
+                  <a href="https://adminbro.com/tutorial-customizing-resources.html">
+                    Customize resources
+                  </a>
+                </div>
+                <div class="dropdown-item">
+                  <a href="https://adminbro.com/tutorial-writing-react-components.html">
+                    Writing your own Components
+                  </a>
+                </div>
+                <div class="dropdown-item">
+                  <a href="https://adminbro.com/tutorial-installation-instructions.html">
+                    Installation instructions
+                  </a>
+                </div>
+                <div class="dropdown-item">
+                  <a href="https://adminbro.com/tutorial-features.html">
+                    Using AdminBro features
+                  </a>
+                </div>
+                <div class="dropdown-item">
+                  <a href="https://adminbro.com/tutorial-custom-dashboard.html">
+                    Customize dashboard
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="header-link">Enterprise</a>
         </div>
       </div>
-      <a>Enterprise</a>
     </div>
   </div>
-  <a class="badge" href="https://github.com/SoftwareBrothers/adminjs">
-    <div class="badge-label">
-      <i class="fab fa-github"></i>
-      <h4>Star</h4>
+  <div class="column is-narrow">
+    <a class="badge" href="https://github.com/SoftwareBrothers/adminjs">
+      <div class="badge-label">
+        <i class="fab fa-github"></i>
+        <h4 class="is-mobile-hidden">Star</h4>
+      </div>
+      <h3 id="header-stargazers-count">...</h3>
+    </a>
+  </div>
+  <div class="column is-mobile-hidden">
+    <div class="header-community">
+      <a class="slack" href="https://join.slack.com/t/adminbro/shared_invite/zt-djsqxxpz-_YCS8UMtQ9Ade6DPuLR7Zw">
+        <img class="avatars" src="./images/slack-community.png" alt="slack community" />
+        <span>Join Slack Community</span>
+      </a>
+      <a class="button demo" href="https://demo.adminjs.co/admin">
+        Demo
+      </a>
     </div>
-    <h3 id="header-stargazers-count">...</h3>
-  </a>
-  <div class="header-community">
-    <a class="slack" href="https://join.slack.com/t/adminbro/shared_invite/zt-djsqxxpz-_YCS8UMtQ9Ade6DPuLR7Zw">
-      <img class="avatars" src="./images/slack-community.png" alt="slack community" />
-      <span>Join Slack Community</span>
-    </a>
-    <a class="button demo" href="https://demo.adminjs.co/admin">
-      Demo
-    </a>
+  </div>
+  <div class="column is-narrow is-desktop-hidden">
+    <div class="hamburger-container">
+      <img class="hamburger" src="./images/icon-hamburger.svg" alt="menu" />
+    </div>
   </div>
 </div>
 
