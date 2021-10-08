@@ -411,7 +411,7 @@
       </div>
     </div>
     <div id="feature-2" class="feature">
-      <div>
+      <div class="description-container">
         <h1>Data Sources</h1>
         <h2>
           Whether you are working with SQL or NoSQL databases, REST or GraphQL APIs, AdminJS is designed to become a data centralization tool for your project and thus is able to gather data from multiple sources.
@@ -433,7 +433,7 @@
       </div>
     </div>
     <div id="feature-4" class="feature">
-      <<div class="description-container">
+      <div class="description-container">
         <h1>Custom Actions</h1>
         <h2>
           If the predefined set of actions doesn’t fulfil all of your needs, you can effortlessly implement your custom business logic by assigning custom-build actions to all of your resources.
@@ -487,6 +487,16 @@
       <div class="image-container">
         <img src="./images/feature-features.png" alt="features" />
       </div>
+    </div>
+    <div class="dots">
+      <span id="feature-dot-1" class="dot"></span>
+      <span id="feature-dot-2" class="dot"></span>
+      <span id="feature-dot-3" class="dot"></span>
+      <span id="feature-dot-4" class="dot"></span>
+      <span id="feature-dot-5" class="dot"></span>
+      <span id="feature-dot-6" class="dot"></span>
+      <span id="feature-dot-7" class="dot"></span>
+      <span id="feature-dot-8" class="dot"></span>
     </div>
   </div>
 </div>
@@ -1448,6 +1458,8 @@
   $('#feature-1').css('display', 'flex');
   $('.feature-name').removeClass('selected');
   $('#feature-name-1').addClass('selected');
+  $('.dot').removeClass('selected-dot');
+  $('#feature-dot-1').addClass('selected-dot');
   const featuresSelector = $('#features-selector');
   featuresSelector.change(() => {
     const selectedValue = $("input[name='features']:checked").val();
@@ -1455,6 +1467,9 @@
     $('#feature-' + selectedValue).css('display', 'flex');
     $('.feature-name').removeClass('selected');
     $('#feature-name-' + selectedValue).addClass('selected');
+
+    $('.dot').removeClass('selected-dot');
+    $('#feature-dot-' + selectedValue).addClass('selected-dot');
   });
 
   $('#testimonial-3').css('display', 'none');
