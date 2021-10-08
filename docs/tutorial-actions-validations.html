@@ -179,9 +179,9 @@
 <p>AdminJS by default validates properties based on rules defined by the database schema. But sometimes you might need to adjust it to your particular needs.</p>
 <h3>How validation works in AdminJS</h3>
 <p>AdminJS validates fields on the backend and sends errors back to the react frontend.</p>
-<p>Information about the errors is send inside the RecordJSON object in the RecordActionResponse.</p>
+<p>Information about the errors is send inside the <a href="RecordJSON.html">RecordJSON</a> object in the <a href="Action.html#RecordActionResponse">RecordActionResponse</a>.</p>
 <p><strong>Example</strong></p>
-<p>so this might be the standard output (RecordActionResponse) of an <code>edit</code> action:</p>
+<p>so this might be the standard output (<a href="Action.html#RecordActionResponse">RecordActionResponse</a>) of an <code>edit</code> action:</p>
 <pre class="prettyprint source"><code>{
   record: { // RecordJSON
     id: 123123123,
@@ -198,13 +198,13 @@
   }
 }
 </code></pre>
-<p>Frontend sees that RecordJSON has errors for property <code>name</code> and it prints them below the &quot;name&quot; input.</p>
+<p>Frontend sees that <a href="RecordJSON.html">RecordJSON</a> has errors for property <code>name</code> and it prints them below the &quot;name&quot; input.</p>
 <h3>Custom validations with ValidationError</h3>
-<p>The most versatile way of adding custom validation errors is by throwing ValidationError in either:</p>
+<p>The most versatile way of adding custom validation errors is by throwing <a href="ValidationError.html">ValidationError</a> in either:</p>
 <ul>
-<li>before action hook,</li>
-<li>after action hook or in the</li>
-<li>action handler</li>
+<li><a href="Action.html#before">before action hook</a>,</li>
+<li><a href="Action.html#after">after action hook</a> or in the</li>
+<li><a href="Action.html#handler">action handler</a></li>
 </ul>
 <p>You can use your custom validator like <a href="https://github.com/typestack/class-validator">ClassValidator</a> or validate data yourself.</p>
 <p>This is an example of throwing validation error in <code>before</code> <code>new</code> action hook:</p>
@@ -229,7 +229,7 @@
 }
 </code></pre>
 <p>when the user gives &quot;forbidden name&quot; in the input for <code>name</code> property - it will trigger a validation error.</p>
-<p>ValidationError takes 2 arguments:</p>
+<p><a href="ValidationError.html">ValidationError</a> takes 2 arguments:</p>
 <ul>
 <li>map with errors for each field</li>
 <li><code>notice</code> error which will appear on the top of the UI</li>
@@ -238,7 +238,7 @@
 <p>The downside of this approach is that it clears all the other validation errors. So if database adapter spotted problems and you threw an error in after hook - those previous errors won't get to the response.</p>
 <h3>Manually filling response with validation errors</h3>
 <p>Sometimes you might want to manually adjust the errors returned by the database adapter. You can do this manually by modifying the response.</p>
-<p>As I wrote in the beginning errors are stored inside the RecordJSON object. So in order to change that - you have to modify it.</p>
+<p>As I wrote in the beginning errors are stored inside the <a href="RecordJSON.html">RecordJSON</a> object. So in order to change that - you have to modify it.</p>
 <p>This is an example of copying error message from one property: 'encryptedPassword' to another 'password' in after action hook:</p>
 <pre class="prettyprint source"><code>const resourceOptions = {
   actions: {

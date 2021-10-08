@@ -296,7 +296,7 @@ const adminJs = new AdminJS({
 <p>Ok, now is the time to create some real users! So open the Admin Panel and create 2 users: one with the <em>admin</em> role and the other with the <em>restricted</em> role.</p>
 <p>Remember their passwords because in the next paragraph we will add a login page.</p>
 <h2>Adding login page</h2>
-<p>module:@adminjs/express plugin, which we use for attaching admin to express framework, has the option to authenticate AdminJS users. In order to use it, we have to change the <em>buildRouter</em> function to the <em>buildAuthenticatedRouter</em>. Now we can pass the authentication method which will verify an email and a password.</p>
+<p><a href="module-@adminjs_express.html">module:@adminjs/express</a> plugin, which we use for attaching admin to express framework, has the option to authenticate AdminJS users. In order to use it, we have to change the <em>buildRouter</em> function to the <em>buildAuthenticatedRouter</em>. Now we can pass the authentication method which will verify an email and a password.</p>
 <pre class="prettyprint source lang-javascript"><code>// Build and use a router which will handle all AdminJS routes
 const router = AdminJSExpress.buildAuthenticatedRouter(adminJs, {
   authenticate: async (email, password) => {
@@ -336,7 +336,7 @@ const Cars = mongoose.model('Car', {
 <p>where the <em>currentAdmin</em> is the object we returned in <em>buildAuthenticatedRouter</em> authenticate function.</p>
 <p>Now only admins will be able to add new users.</p>
 <h2>Restricting access to selected records</h2>
-<p><em>isAccessible</em> takes an entire ActionContext as an argument. That gives us lots of options. For instance, we can disable editing of cars which does not belong to <em>restricted</em> users (<em>admins</em> will still be able to edit everything).</p>
+<p><em>isAccessible</em> takes an entire <a href="Action.html#ActionContext">ActionContext</a> as an argument. That gives us lots of options. For instance, we can disable editing of cars which does not belong to <em>restricted</em> users (<em>admins</em> will still be able to edit everything).</p>
 <p>In order to achieve that we can pass the following function to both <em>edit</em> and <em>delete</em> actions in <em>Cars</em> collection options:</p>
 <pre class="prettyprint source lang-javascript"><code>isAccessible: ({ currentAdmin, record }) => {
   return currentAdmin && (

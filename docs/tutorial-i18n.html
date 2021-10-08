@@ -178,7 +178,7 @@
     <p>AdminJS has the default set of texts prepared in English language. But nothing stands in a way
 for you to change each of them or even translate AdminJS to a different language.</p>
 <h2>Locale option and basic translations</h2>
-<p>All the translations can be overridden by using AdminJSOptions#locale property.</p>
+<p>All the translations can be overridden by using <a href="AdminJSOptions.html#locale">AdminJSOptions#locale</a> property.</p>
 <p>So in order to define how a <code>new</code> action is named, simply override it's translation:</p>
 <pre class="prettyprint source lang-javascript"><code>const options = {
   locale: {
@@ -214,7 +214,7 @@ const adminJs = new AdminJS(options)
 <h2>Namespaces</h2>
 <p>All the translation keys are divided into the following groups:</p>
 <ul>
-<li><strong>actions</strong> - translations for all actions - both default actions, and those
+<li><strong>actions</strong> - translations for all <a href="Action.html">actions</a> - both default actions, and those
 created by you.</li>
 <li><strong>buttons</strong> - translations for all kinds of buttons.</li>
 <li><strong>messages</strong> - translations for all messages in the app</li>
@@ -296,8 +296,8 @@ i18next.init({...}, (err, t) => {
 })
 </code></pre>
 <h2>How to use translations in my custom actions/components</h2>
-<p>Action#before and Action#after hooks come with an Action#ActionContext
-param. It combines all the TranslateFunctions like <code>translateButton</code>, <code>translateLabel</code> etc.</p>
+<p><a href="Action.html#before">Action#before</a> and <a href="Action.html#after">Action#after</a> hooks come with an Action#ActionContext
+param. It combines all the <a href="TranslateFunctions.html">TranslateFunctions</a> like <code>translateButton</code>, <code>translateLabel</code> etc.</p>
 <p>so you can use them like this:</p>
 <pre class="prettyprint source lang-javascript"><code>// before Hook
 {
@@ -307,7 +307,7 @@ param. It combines all the TranslateFunctions like <code>translateButton</code>,
   }
 }
 </code></pre>
-<p>If you want to use translations in your components - you can use useTranslation hook.</p>
+<p>If you want to use translations in your components - you can use <a href="useTranslation.html">useTranslation</a> hook.</p>
 <h2>More options...</h2>
 <p>On the backend, we use <a href="https://www.i18next.com/">https://www.i18next.com/</a> library. So make
 sure to check out their docs to read more about all the possible options.</p>
