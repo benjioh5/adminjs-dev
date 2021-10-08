@@ -175,7 +175,7 @@
                 <section>
 
 <article>
-    <p>At some point you would probably like to customize default views or create custom actions. <a href="Action.html">Actions</a> are the way of doing that.</p>
+    <p>At some point you would probably like to customize default views or create custom actions. Actions are the way of doing that.</p>
 <h2>Default actions</h2>
 <p>AdminJS has 7 major <em>default actions</em> defined for each resource:</p>
 <p><strong>Resource</strong> base actions:</p>
@@ -201,7 +201,7 @@
 <p>Take a look at the following screenshot explaining which action type is where:</p>
 <img src="./images/actions.png">
 <h2>Modify default action per Resource</h2>
-<p>Each action has all the parameters defined by <a href="Action.html">Action</a>. They can be modified per resource along with other <a href="ResourceOptions.html">ResourceOptions</a></p>
+<p>Each action has all the parameters defined by Action. They can be modified per resource along with other ResourceOptions</p>
 <p>This is how modifying <strong>show</strong> action and creating a new <strong>myNewAction</strong> can
 look like:</p>
 <pre class="prettyprint source lang-javascript"><code>const adminJsOptions = {
@@ -225,8 +225,8 @@ look like:</p>
 }
 </code></pre>
 <h3>Basic properties</h3>
-<p>Yes - you can modify things like: <em>label</em>, <em>icon</em> <em>and visibility</em>. List of all options can be found in <a href="Action.html">Action</a></p>
-<p>In the following example, we will change <a href="Action.html#icon">icon</a>, and will show it only for records with an email.</p>
+<p>Yes - you can modify things like: <em>label</em>, <em>icon</em> <em>and visibility</em>. List of all options can be found in Action</p>
+<p>In the following example, we will change icon, and will show it only for records with an email.</p>
 <pre class="prettyprint source lang-javascript"><code>const adminJsOptions = {
   resources: [
     { resource: Article,
@@ -242,12 +242,12 @@ look like:</p>
   ],
 }
 </code></pre>
-<p><a href="Action.html#isVisible">Action#isVisible</a> can be either a function returning a boolean value or a boolean value itself. There is also another method: <a href="Action.html#isAccessible">Action#isAccessible</a> which not only hides given action but also totally
+<p>Action#isVisible can be either a function returning a boolean value or a boolean value itself. There is also another method: Action#isAccessible which not only hides given action but also totally
 disables it.</p>
 <h3>Action handler and action hooks</h3>
-<p>Each action has an <a href="Action.html#handler">Action#handler</a> function. This function is executed every time the action is invoked and all of the default actions has their handlers.</p>
-<p>You probably don't want to modify behavior of the handler for the default Edit action. But, if you really want to change this action, you can use <a href="Action.html#before">Action#before</a> and <a href="Action.html#after">Action#after</a> action hooks.</p>
-<p>Nevertheless, <a href="Action.html#handler">Action#handler</a> has to be specified for new actions (read the next section).</p>
+<p>Each action has an Action#handler function. This function is executed every time the action is invoked and all of the default actions has their handlers.</p>
+<p>You probably don't want to modify behavior of the handler for the default Edit action. But, if you really want to change this action, you can use Action#before and Action#after action hooks.</p>
+<p>Nevertheless, Action#handler has to be specified for new actions (read the next section).</p>
 <h2>Modifying actions for all resources</h2>
 <p>Default actions templates can be accessed right from the AdminJS class, by using ACTIONS object.</p>
 <pre class="prettyprint source lang-javascript"><code>
@@ -260,7 +260,7 @@ AdminJS.ACTIONS.show.isAccessible = ({ currentAdmin, resource, record }) => {
 }
 </code></pre>
 <h2>Create a new, custom actions</h2>
-<p>Also, you can define your own actions. Simply pass <a href="Action.html">Action</a> under a new key to <a href="ResourceOptions.html">ResourceOptions</a>.</p>
+<p>Also, you can define your own actions. Simply pass Action under a new key to ResourceOptions.</p>
 <p>Your action can be either <code>resource</code>, <code>record</code> or <code>bulk</code> type.</p>
 <pre class="prettyprint source lang-javascript"><code>const adminJsOptions = {
   resources: [
@@ -287,7 +287,7 @@ responsible for rendering it. To see what options you have - go to the next tuto
 <li><a href="tutorial-writing-react-components.html">05. Writing your own Components</a></li>
 </ul>
 <h2>And much much more...</h2>
-<p>Things I presented in this tutorial are just the tip of the iceberg. Make sure to check out all available options in <a href="Action.html">Action</a> interface.</p>
+<p>Things I presented in this tutorial are just the tip of the iceberg. Make sure to check out all available options in Action interface.</p>
 </article>
 
 </section>

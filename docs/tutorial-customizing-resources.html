@@ -176,9 +176,9 @@
 
 <article>
     <p>AdminJS works quite well with a default scaffolding, but what if you want to modify how the Resources look like?
-You can use <a href="ResourceOptions.html">ResourceOptions</a></p>
+You can use ResourceOptions</p>
 <h2>Resource options</h2>
-<p><a href="ResourceOptions.html">ResourceOptions</a> are passed to the AdminJS along with other <a href="AdminJSOptions.html">configuration options</a>.</p>
+<p>ResourceOptions are passed to the AdminJS along with other configuration options.</p>
 <pre class="prettyprint source lang-javascript"><code>...
 const Article = require('./models/article')
 
@@ -200,7 +200,7 @@ const adminJsOptions = {
 </blockquote>
 <h2>How a <strong>Resource</strong> can be modified?</h2>
 <p>You have lots of options. You can modify the basic appearance of a resource and more complicated aspects, as to how a particular field should be rendered.</p>
-<p>In the next sections, I will point out a couple of options. For the full list visit the <a href="ResourceOptions.html">ResourceOptions</a> interface.</p>
+<p>In the next sections, I will point out a couple of options. For the full list visit the ResourceOptions interface.</p>
 <h3>{ <strong>parent</strong> } In the sidebar</h3>
 <p>By default AdminJS groups resources by the database, they belong to. But you can change that and group them in a different way. It can be done by using a <code>parent</code> option.</p>
 <p>So let say you want to group all text'ish resources into a <strong>content</strong> category in the sidebar.
@@ -256,7 +256,7 @@ present just 3 of them in a different order.</p>
 <li>fully customize how each property should be presented</li>
 <li>add custom properties</li>
 </ul>
-<p>Everything thanks to <a href="PropertyOptions.html">PropertyOptions</a>.</p>
+<p>Everything thanks to PropertyOptions.</p>
 <h3>Visibility of properties { <strong>...[propertyName].position</strong> } and { <strong>...[propertyName].isVisible</strong> }</h3>
 <p>using <strong>xxxProperties</strong> is not the only way of handling which property should be seen on a list, edit, filter and show views. You can achieve a similar result by using <strong>position</strong> and <strong>isVisible</strong> options.</p>
 <p>Using them have more sense if you want to disable one particular field, so instead of modifying entire <strong>xxxProperties</strong> array you can set up just one filed.</p>
@@ -276,7 +276,7 @@ present just 3 of them in a different order.</p>
 <p><strong>Important notice about overriding xxxProperties</strong>: both <em>{ propertyName.position }</em> and <em>{ propertyName.isVisible }</em> will be overwritten by <em>xxxProperties</em> if you set it.</p>
 <h3>{ <strong>[propertyName].isTitle</strong> }</h3>
 <p>As I mentioned a <strong>title</strong> property goes first in the list of all properties, and in smaller screens, only this property stays. Also title property is the property on which you can search in autocomplete (by default).</p>
-<p>AdminJS tries to pick <strong>title</strong> property automatically. It is property with name &quot;name&quot; or &quot;email&quot;. You can change this behavior by setting <a href="PropertyOptions.html#isTitle">PropertyOptions#isTitle</a> for default property to <code>false</code> and for the new property to <code>true</code>.</p>
+<p>AdminJS tries to pick <strong>title</strong> property automatically. It is property with name &quot;name&quot; or &quot;email&quot;. You can change this behavior by setting PropertyOptions#isTitle for default property to <code>false</code> and for the new property to <code>true</code>.</p>
 <h3>{ <strong>[propertyName].type</strong> } of a property</h3>
 <p>By default types of properties are computed by adapters, see tutorial: <a href="tutorial-passing-resources.html">02. Adding resources</a> tutorial.</p>
 <p>So when you have a <strong>DATE</strong> field it will be rendered as a <strong>date</strong> with DatePicker and custom <strong>from</strong> - <strong>to</strong> filter.</p>
@@ -290,7 +290,7 @@ present just 3 of them in a different order.</p>
 }
 </code></pre>
 <p>And you will see <a href="https://quilljs.com">https://quilljs.com</a> editor in place of a regular text field.</p>
-<p>Supported types can be found <a href="BaseProperty.html#PropertyType">here</a></p>
+<p>Supported types can be found here</p>
 <h3>{ <strong>[propertyName].availableValues</strong> } narrow down the possible values</h3>
 <p>when you pass this option to a property it will render the <strong>select</strong> HTML element with all the
 available options.</p>
@@ -359,10 +359,10 @@ To see how to do this visit tutorial: <a href="tutorial-writing-react-components
 <h2>What's next?</h2>
 <p>To see all available options - check out the</p>
 <ul>
-<li><a href="ResourceOptions.html">ResourceOptions</a> interface.</li>
-<li><a href="PropertyOptions.html">PropertyOptions</a> interface.</li>
+<li>ResourceOptions interface.</li>
+<li>PropertyOptions interface.</li>
 </ul>
-<p>There is an another very important section in <a href="ResourceOptions.html">ResourceOptions</a> - <strong>actions</strong>. It gives you the ability
+<p>There is an another very important section in ResourceOptions - <strong>actions</strong>. It gives you the ability
 to modify existing actions like <code>edit</code> or <code>delete</code> or add new <strong>actions</strong>. Go to the next tutorial: <a href="tutorial-actions.html">04. Customize actions</a> to read more about them.</p>
 <p>You can also read more about creating your own components in this tutorial: <a href="tutorial-writing-react-components.html">05. Writing your own Components</a>.</p>
 </article>
