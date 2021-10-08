@@ -647,7 +647,7 @@
       </button>
     </form>
   </div>
-</div>
+</div> 
 
 <div id="testimonials" class="container">
   <div class="testimonials">
@@ -714,13 +714,13 @@
       <img id="next-testimonial" src="./images/icon-arrow-right.svg" alt="next" />
     </div>
   </div>
-</div>
+</div> 
 
 <div class="container products">
   <h1>What our users are building with AdminJS</h1>
   <div>
     <div class="card">
-      <img src="./images/car-fellows.png" alt="carfellows" />
+      <img class="cover" src="./images/car-fellows.png" alt="carfellows" />
       <h3>Car leasing platform</h3>
       <h5>
         CarFellows is an online B2C car leasing platform that connects the
@@ -732,7 +732,7 @@
       </a>
     </div>
     <div class="card">
-      <img src="./images/sky-home.png" alt="skyhome" />
+      <img class="cover" src="./images/sky-home.png" alt="skyhome" />
       <h3>eCommerce for interior designers</h3>
       <h5>
         SkyHome is a Scandinavian startup offering an all-in-one eCommerce
@@ -762,33 +762,35 @@
         <i class="fab fa-slack-hash fa-lg"></i>Join the community on Slack
       </a>
     </div>
-    <div class="messages">
-      <div id="message-1" class="user-message">
-        <span class="user">@user</span> How can I change the colours of the theme?
-      </div>
-      <div id="message-2">
-        <span class="support">@AdminJS Support</span> A new version of
-        @adminjs/hapi has been released!
-      </div>
-      <div id="message-3">
-        <span class="support">@AdminJS Support</span> You can try to create a
-        before hook and delete specific keys from
-        <span class="code">request.payload</span> if the
-        <span class="code">request.method === 'post'</span>
-      </div>
-      <div id="message-4" class="user-message">
-        <span class="user">@user</span> Hello! Love the idea of the project, do
-        you plan on supporting Prisma 2 ORM?
-      </div>
-      <div id="message-5">
-        <span class="support">@AdminJS Support</span> You have to add
-        <span class="code">jobs</span> to <span class="code">properties</span> in
-        your resource options then add an <span class="code">after</span> hook to
-        your <span class="code">list</span> action which calculates the count per
-        row.
-      </div>
-      <div id="message-6" class="user-message">
-        <span class="user">@user</span> Hi guys, anyone using AdminJS + Auth0?
+    <div class="messages-container">
+      <div class="messages">
+        <div id="message-1" class="user-message">
+          <span class="user">@user</span> How can I change the colours of the theme?
+        </div>
+        <div id="message-2">
+          <span class="support">@AdminJS Support</span> A new version of
+          @adminjs/hapi has been released!
+        </div>
+        <div id="message-3">
+          <span class="support">@AdminJS Support</span> You can try to create a
+          before hook and delete specific keys from
+          <span class="code">request.payload</span> if the
+          <span class="code">request.method === 'post'</span>
+        </div>
+        <div id="message-4" class="user-message">
+          <span class="user">@user</span> Hello! Love the idea of the project, do
+          you plan on supporting Prisma 2 ORM?
+        </div>
+        <div id="message-5">
+          <span class="support">@AdminJS Support</span> You have to add
+          <span class="code">jobs</span> to <span class="code">properties</span> in
+          your resource options then add an <span class="code">after</span> hook to
+          your <span class="code">list</span> action which calculates the count per
+          row.
+        </div>
+        <div id="message-6" class="user-message">
+          <span class="user">@user</span> Hi guys, anyone using AdminJS + Auth0?
+        </div>
       </div>
     </div>
   </div>
@@ -807,620 +809,57 @@
           Always open-source under the <b>MIT license</b>.
         </h5>
       </div>
-      <div class="footer-column">
-        <h3>Product</h3>
-        <a id="footer-installation-link">
-          Installation
-        </a>
-        <a id="footer-how-it-works-link">
-          How it works
-        </a>
-        <a id="footer-features-link">
-          Features
-        </a>
-        <a id="footer-testimonials-link">
-          Testimonials
-        </a>
-      </div>
-      <div class="footer-column">
-        <h3>AdminJS</h3>
-        <a href="https://demo.adminjs.co/admin">
-          Demo
-        </a>
-        <a href="https://adminbro.com/tutorial-customizing-resources.html">
-          Community
-        </a>
-        <a href="https://adminbro.com/tutorial-customizing-resources.html">
-          Enterprise
-        </a>
-      </div>
-      <div class="footer-column">
-        <h3>Support</h3>
-        <a href="https://adminbro.com/tutorial-customizing-resources.html">
-          Contact us
-        </a>
-        <a href="https://adminbro.com/docs.html">
-          Documentation
-        </a>
-        <a href="https://adminbro.com/tutorial-installation-instructions.html">
-          Tutorials
-        </a>
-        <a href="https://github.com/SoftwareBrothers/adminjs">
-          GitHub
-        </a>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Product</h3>
+          <a id="footer-installation-link">
+            Installation
+          </a>
+          <a id="footer-how-it-works-link">
+            How it works
+          </a>
+          <a id="footer-features-link">
+            Features
+          </a>
+          <a id="footer-testimonials-link">
+            Testimonials
+          </a>
+        </div>
+        <div class="footer-column">
+          <h3>AdminJS</h3>
+          <a href="https://demo.adminjs.co/admin">
+            Demo
+          </a>
+          <a href="https://adminbro.com/tutorial-customizing-resources.html">
+            Community
+          </a>
+          <a href="https://adminbro.com/tutorial-customizing-resources.html">
+            Enterprise
+          </a>
+        </div>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <a href="https://adminbro.com/tutorial-customizing-resources.html">
+            Contact us
+          </a>
+          <a href="https://adminbro.com/docs.html">
+            Documentation
+          </a>
+          <a href="https://adminbro.com/tutorial-installation-instructions.html">
+            Tutorials
+          </a>
+          <a href="https://github.com/SoftwareBrothers/adminjs">
+            GitHub
+          </a>
+        </div>
       </div>
     </div>
     <h4>© AdminJS 2021. All rights reserved | Privacy Policy</h4>
   </div>
 </div>
 
-<!-- <div class="white-oval">
-  <div class="container">
-    <div class="columns header-message">
-      <div class="column">
-        <h2>Manage All Your Application Data in One Place</h2>
-        <p>
-          Multiple adapters can feed admin panel with data from various sources
-          and the Admin Panel users can easily find and update the information
-          they need.
-        </p>
-      </div>
-    </div>
-    <div class="columns is-desktop">
-      <div class="column">
-        <img src="./images/graph.png" />
-      </div>
-      <div class="column is-offset-1-widescreen">
-        <div class="todo-actions">
-          <h4>Connect it with your ODM/ORM</h4>
-          <h4>
-            Create, Read, Update, Delete all your models from one admin panel
-          </h4>
-          <h4>Link records from different data sources in a few minutes</h4>
-          <div class="action-buttons has-text-left-desktop has-text-centered">
-            <a
-              class="button is-outlined is-primary"
-              href="https://demo.adminjs.co/admin"
-            >
-              See a demo
-            </a>
-            <span>or</span>
-            <a
-              class="button is-primary"
-              href="/tutorial-installation-instructions.html"
-            >
-              Get started
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="credentials">
-  <div class="container">
-    <div class="columns">
-      <div class="column">
-        <h2>What AdminJS users say</h2>
-      </div>
-    </div>
-    <div class="columns">
-      <div
-        class="
-          column
-          is-4-desktop
-          is-offset-2-desktop
-          is-3-widescreen
-          is-offset-3-widescreen
-        "
-      >
-        <a class="box" href="https://youtu.be/7Ujn7g1JF1Q" target="_blank">
-          <h5>"Project to be delivered in just 4 days... you saved me !!!"</h5>
-          <span>
-            <i class="fab fa-youtube"></i>
-            JIMMY R.
-          </span>
-        </a>
-      </div>
-      <div class="column is-4-desktop is-3-widescreen">
-        <a class="box" href="https://youtu.be/7Ujn7g1JF1Q" target="_blank">
-          <h5>"I had an unrealistic deadline and this helped me a lot."</h5>
-          <span>
-            <i class="fab fa-youtube"></i>
-            SUKHRAJ SINGH
-          </span>
-        </a>
-      </div>
-    </div>
-    <div class="columns">
-      <div class="column is-4-desktop is-3-widescreen is-offset-1-widescreen">
-        <a
-          class="box"
-          href="https://github.com/SoftwareBrothers/adminjs/issues/160"
-          target="_blank"
-        >
-          <h5>"Thanks for an awesome piece of software!"</h5>
-          <span>
-            <i class="fab fa-github"></i>
-            #160: DOUBLETUNA
-          </span>
-        </a>
-      </div>
-      <div class="column is-4-desktop">
-        <a
-          class="box"
-          href="https://github.com/SoftwareBrothers/adminjs/issues/141"
-          target="_blank"
-        >
-          <h5>
-            "Great work so far, the tool is incredibly easy to get setup and
-            understand outside of this issue."
-          </h5>
-          <span>
-            <i class="fab fa-github"></i>
-            #141: N8STOWELL82
-          </span>
-        </a>
-      </div>
-      <div class="column is-3-widescreen is-4-desktop">
-        <a
-          class="box"
-          href="https://www.reddit.com/r/node/comments/a8enhs/adminbro_just_got_an_option_to_modify_its/"
-          target="_blank"
-        >
-          <h5>
-            "Very nice UI. You did a great job ! Hope to see this project being
-            used by a lot of people."
-          </h5>
-          <span>
-            <i class="fab fa-reddit"></i>
-            MOJODOJODJO
-          </span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="columns">
-    <div class="column is-10-widescreen is-offset-1-widescreen">
-      <div class="box stat-box">
-        <h2 class="has-text-centered">AdminJS in numbers</h2>
-        <div class="columns">
-          <div class="column is-5 has-text-centered-mobile">
-            <p><img src="./images/github.svg" alt="github" /></p>
-            <h4>
-              <a href="https://github.com/SoftwareBrothers/adminjs"
-                ><i class="fab fa-github"></i
-              ></a>
-              <img src="./images/star.svg" alt="star" />
-              <strong id="stargazers_count">...loading</strong>
-              <script>
-                $.ajax(
-                  'https://api.github.com/repos/SoftwareBrothers/adminjs'
-                ).then((res) => {
-                  $('#stargazers_count').text(res.stargazers_count);
-                });
-              </script>
-            </h4>
-          </div>
-          <div class="column is-7 has-text-centered-mobile">
-            <div class="level">
-              <div>
-                <p>Weekly Downloads</p>
-                <h4 id="downloads_count">...loading</h4>
-                <script>
-                  $.ajax(
-                    'https://api.npmjs.org/downloads/point/last-week/adminjs'
-                  ).then((res) => {
-                    if (res.downloads) {
-                      $('#downloads_count').text(res.downloads);
-                    }
-                  });
-                </script>
-              </div>
-              <div>
-                <img src="./images/downloads.svg" alt="downloads" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="action-buttons has-text-centered">
-          <a
-            class="button is-outlined is-primary"
-            href="https://github.com/SoftwareBrothers/adminjs"
-          >
-            Give a star
-          </a>
-          <span></span>
-          <a
-            class="button is-outlined is-primary"
-            href="https://join.slack.com/t/adminbro/shared_invite/zt-djsqxxpz-_YCS8UMtQ9Ade6DPuLR7Zw"
-          >
-            <i class="fab fa-slack-hash fa-lg"></i> Join the community
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="white-oval feature-docs">
-  <div class="container">
-    <div class="columns header-message">
-      <div class="column">
-        <h2>Tailor Admin to Your Needs</h2>
-        <p>Tutorials and open - source community support</p>
-      </div>
-    </div>
-    <div class="columns is-multiline">
-      <div class="column is-4-widescreen is-6-tablet">
-        <a class="box" href="Theme.html">
-          <img src="./images/icon-branding.svg" alt="branding" />
-          <h4>Adjust branding</h4>
-          <p>
-            The entire User Interface is based on a finite set of colors. You
-            can easily modify them to match your brand identity.
-          </p>
-        </a>
-      </div>
-      <div class="column is-4-widescreen is-6-tablet">
-        <a class="box" href="tutorial-custom-dashboard.html">
-          <img src="./images/icon-dashboard.svg" alt="branding" />
-          <h4>Customise the Dashboard</h4>
-          <p>
-            Simply define a handler function and render dashboard component with
-            beautiful graphs.
-          </p>
-        </a>
-      </div>
-      <div class="column is-4-widescreen is-6-tablet">
-        <a class="box" href="http://localhost:3000/tutorial-rbac.html">
-          <img src="./images/icon-rbac.svg" alt="branding" />
-          <h4>Role Based Access Control</h4>
-          <p>
-            You have different user types? No problem - with AdminJS you can
-            differentiate the users and assign them the action they need.
-          </p>
-        </a>
-      </div>
-      <div class="column is-4-widescreen is-6-tablet">
-        <a class="box" href="Theme.html">
-          <img src="./images/icon-react.svg" alt="react" />
-          <h4>React UI</h4>
-          <p>
-            Each action and property is rendered as a React component which you
-            can override - it gives you almost unlimited options.
-          </p>
-        </a>
-      </div>
-      <div class="column is-4-widescreen is-6-tablet">
-        <a class="box" href="tutorial-actions.html">
-          <img src="./images/icon-action.svg" alt="actions" />
-          <h4>Actions</h4>
-          <p>
-            Assign new actions to your resources and implement custom business
-            logic in a simple way.
-          </p>
-        </a>
-      </div>
-      <div class="column is-4-widescreen is-6-tablet">
-        <a class="box" href="tutorial-actions.html">
-          <img src="./images/icon-hooks.svg" alt="branding" />
-          <h4>Action Hooks</h4>
-          <p>
-            Use hooks to set default values or create an entire audit log for
-            the selected resources.
-          </p>
-        </a>
-      </div>
-    </div>
-    <div class="action-buttons has-text-centered">
-      <a
-        class="button is-outlined is-primary"
-        href="https://demo.adminjs.co/admin"
-      >
-        See a demo
-      </a>
-      <span>or</span>
-      <a
-        class="button is-primary"
-        href="/tutorial-installation-instructions.html"
-      >
-        Get started
-      </a>
-    </div>
-  </div>
-</div>
-<div class="feature-side-blocks">
-  <div class="bg-crud">
-    <div class="container">
-      <div class="columns">
-        <div
-          class="
-            column
-            is-5-desktop is-7-tablet is-offset-2-tablet is-offset-0-desktop
-          "
-        >
-          <h2>CRUD for All Your Resources</h2>
-          <p>
-            Right after the installation AdminJS shows you all the resources in
-            the connected databases. For each of them you can perform basic CRUD
-            actions: create, read, update and delete.
-          </p>
-          <div class="action-buttons">
-            <a
-              class="button is-primary"
-              href="/tutorial-installation-instructions.html"
-            >
-              Get started
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bg-filter">
-    <div class="container">
-      <div class="columns">
-        <div
-          class="
-            column
-            is-5-desktop is-7-tablet is-offset-7-desktop is-offset-2-tablet
-          "
-        >
-          <h2>Advanced Filters</h2>
-          <p>
-            You can filter the resources and easily find what you are looking
-            for.
-          </p>
-          <div class="action-buttons">
-            <a
-              class="button is-primary"
-              href="/tutorial-installation-instructions.html"
-            >
-              Get started
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="support-block">
-  <div class="container">
-    <div class="columns header-message">
-      <div class="column has-text-centered">
-        <h2>Need help? Just contact us!</h2>
-      </div>
-    </div>
-    <div class="columns is-desktop">
-      <div class="column is-6-desktop">
-        <div class="box">
-          <div class="img">
-            <img src="./images/e-commerce.png" alt="E-commerce" />
-          </div>
-          <div class="text">
-            <h4>E-Commerce</h4>
-            <p>
-              AdminJS is a perfect tool for E-commerce platforms, especially
-              when you sell non-standard custom products. Interested? Let's
-              talk!
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img">
-            <img src="./images/bi.png" alt="Business Intelligence" />
-          </div>
-          <div class="text">
-            <h4>Business Intelligence</h4>
-            <p>
-              With AdminJS you can create a robust dashboard and monitor you
-              entire business. Need help? Just contact us!
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="column is-5-widescreen is-offset-1-widescreen is-6-desktop">
-        <form
-          action="http://localhost:5001/softbros-bi/us-central1/needHelp"
-          class="form"
-          method="POST"
-          id="quote-form"
-        >
-          <div class="success-msg has-text-centered">
-            <h2>Thank you!</h2>
-            <img src="./images/check.svg" alt="sent" />
-            <h4>We will get back to you very soon...</h4>
-          </div>
-          <div class="form-fields">
-            <h2>Let's talk!</h2>
-            <div class="field">
-              <label class="label" for="name">Name</label>
-              <div class="control">
-                <input name="name" class="input" type="text" id="name" />
-              </div>
-            </div>
-            <div class="field">
-              <label class="label" for="email">E-mail address</label>
-              <div class="control">
-                <input
-                  name="email"
-                  class="input"
-                  type="email"
-                  id="email"
-                  required
-                />
-              </div>
-            </div>
-            <div class="interested">
-              <label class="label">I'm interested in:</label>
-              <label class="checkbox">
-                <input type="checkbox" name="interested" value="bi" />
-                business intelligence
-              </label>
-              <label class="checkbox">
-                <input type="checkbox" name="interested" value="e-commerce" />
-                e-commerce solution
-              </label>
-              <label class="checkbox">
-                <input type="checkbox" name="interested" value="startup" />
-                help with my startup
-              </label>
-              <label class="checkbox">
-                <input type="checkbox" name="interested" value="other" />
-                other
-              </label>
-            </div>
-            <div class="field">
-              <label class="label" for="content">Message</label>
-              <div class="control">
-                <textarea
-                  name="content"
-                  class="textarea"
-                  id="content"
-                  required
-                ></textarea>
-              </div>
-            </div>
-            <div class="action-buttons has-text-centered">
-              <button class="button is-success" type="submit">Send</button>
-              <p class="notice">
-                By clicking "Send", you agree with the processing of personal
-                data according to the Privacy Policy.
-              </p>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="curved-footer">
-  <div class="top">
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <div class="the-part">
-            <h2>Be part of AdminJS community</h2>
-            <h4>Join the AdminJS community</h4>
-          </div>
-        </div>
-      </div>
-      <div class="columns">
-        <div
-          class="column is-4 is-offset-2 is-offset-3-widescreen is-3-widescreen"
-        >
-          <a
-            class="button is-link"
-            href="https://github.com/SoftwareBrothers/adminjs"
-          >
-            <i class="fab fa-github fa-2x"></i>
-            <span>AdminJS GitHub Repository</span>
-          </a>
-        </div>
-        <div class="column is-4 is-3-widescreen">
-          <a
-            class="button is-link"
-            href="https://join.slack.com/t/adminbro/shared_invite/zt-czfb79t1-0U7pn_KCqd5Ts~lbJK0_RA"
-          >
-            <i class="fab fa-slack-hash fa-2x"></i>
-            <span>AdminJS Slack Community</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bottom">
-    <div class="container">
-      <div class="columns is-desktop has-text-centered-mobile">
-        <div class="column is-2-desktop is-offset-0-desktop is-offset-1">
-          <p class="logo"><img src="./images/logo.svg" alt="logo" /></p>
-          <p>
-            A tool for managing you <strong>Node.js application</strong> with
-            ease.
-          </p>
-          <p>Always open source under the <strong>MIT license</strong>.</p>
-          <p class="sb">
-            <img src="./images/sblogo.svg" alt="SoftwareBrothers" />
-          </p>
-          <p>
-            <a href="https://softwarebrothers.co">www.softwarebrothers.co</a>
-          </p>
-        </div>
-        <div class="column is-1 is-offset-1">
-          <img src="./images/sbsingle.png" alt="Software Brothers" />
-        </div>
-        <div
-          class="
-            column
-            is-6-widescreen
-            is-10-tablet
-            is-offset-1-tablet
-            is-7-desktop
-            is-offset-0-desktop
-          "
-        >
-          <h4>Join open source Software Brothers community</h4>
-          <p>News from Software Brothers team & open source initiatives.</p>
-          <form
-            action="http://opensource.softwarebrothers.co/add_subscriber"
-            method="post"
-            id="revue-form"
-            name="revue-form"
-            target="_blank"
-            class="form columns"
-          >
-            <div class="field column is-4">
-              <label class="label" for="member_first_name">First name</label>
-              <div class="control">
-                <input
-                  class="input revue-form-field"
-                  type="text"
-                  name="member[first_name]"
-                  id="member_first_name"
-                />
-              </div>
-            </div>
-            <div class="field column is-6">
-              <label class="label" for="member_email">Email address</label>
-              <div class="control">
-                <input
-                  class="input revue-form-field"
-                  type="email"
-                  name="member[email]"
-                  id="member_email"
-                />
-              </div>
-            </div>
-            <div class="column is-6">
-              <button
-                class="button is-success"
-                type="submit"
-                value="Subscribe"
-                name="member[subscribe]"
-                id="member_submit"
-              >
-                Join
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="columns has-text-right">
-        <div class="column">
-          © Software Brothers 2020. All rights reserved | Privacy Policy
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <script>
+  const mobileBreakpoint = 1023;
   const nav = $('.top-nav');
   const body = $('body');
   let oldPosition = 0;
@@ -1488,8 +927,13 @@
     $('#feature-dot-' + selectedValue).addClass('selected-dot');
   });
 
-  $('#testimonial-3').css('display', 'none');
-  $('#testimonial-4').css('display', 'none');
+  if ($(window).width() > mobileBreakpoint) {
+    $('#testimonial-3').css('display', 'none');
+    $('#testimonial-4').css('display', 'none');
+  } else {
+    $('#testimonial-3').css('display', 'flex');
+    $('#testimonial-4').css('display', 'flex');
+  }
   $('#prev-testimonial').addClass('disabled');
   let index = 0;
   $('#next-testimonial').click(() => {
@@ -1533,19 +977,19 @@
   }
 
   $('#footer-installation-link').click(() => {
-    scrollToPosition('installation', -200)
+    scrollToPosition('installation', $(window).width() > mobileBreakpoint ? -200 : -100)
   });
 
   $('#footer-how-it-works-link').click(() => {
-    scrollToPosition('how-it-works', 80)
+    scrollToPosition('how-it-works', $(window).width() > mobileBreakpoint ? 80 : 20)
   });
 
   $('#footer-features-link').click(() => {
-    scrollToPosition('features', 80)
+    scrollToPosition('features', $(window).width() > mobileBreakpoint ? 80 : 20)
   });
 
   $('#footer-testimonials-link').click(() => {
-    scrollToPosition('testimonials', -120)
+    scrollToPosition('testimonials', $(window).width() > mobileBreakpoint ? -80 : -140)
   });
 
   $('#copy-button').click(() => {
