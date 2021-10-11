@@ -39,7 +39,7 @@
                 </div>
                 <div class="dropdown-item">
                   <a href="https://adminbro.com/tutorial-features.html">
-                    Using AdminBro features
+                    Using AdminJS features
                   </a>
                 </div>
                 <div class="dropdown-item">
@@ -76,9 +76,59 @@
     </div>
   </div>
   <div class="column is-narrow is-desktop-hidden">
-    <div class="hamburger-container">
+    <a id="hamburger-button" class="hamburger-container">
       <img class="hamburger" src="./images/icon-hamburger.svg" alt="menu" />
+    </a>
+  </div>
+</div>
+
+<div id="mobile-menu" class="mobile-menu">
+  <div class="columns is-mobile is-vcentered is-gapless">
+    <div class="column">
+      <img class="logo" src="./images/adminjs-logo.svg" alt="adminjs"/>
     </div>
+    <div class="column is-narrow">
+      <a id="menu-close-button" class="close-button-container">
+        <img class="close-button" src="./images/icon-times.svg" alt="close menu" />
+      </a>
+    </div>
+  </div>
+  <div class="mobile-menu-content">
+    <a id="docs-menu-button" class="docs-label">
+      <h2>Documentation</h2>
+      <i id="docs-chevron" class="fas fa-chevron-down"></i>
+    </a>
+    <div id="docs-menu-collapsible" class="docs-collapsible-content">
+      <a class="link" href="https://adminbro.com/tutorial-installation-instructions.html">
+        Installation instructions
+      </a>
+      <a class="link" href="https://adminbro.com/tutorial-passing-resources.html">
+        Adding resources
+      </a>
+      <a class="link" href="https://adminbro.com/tutorial-customizing-resources.html">
+        Customize resources
+      </a>
+      <a class="link" href="https://adminbro.com/tutorial-actions.html">
+        Customize actions
+      </a>
+      <a class="link" href="https://adminbro.com/tutorial-writing-react-components.html">
+        Writing your own Components
+      </a>
+      <a class="link" href="https://adminbro.com/tutorial-features.html">
+        Using AdminJS features
+      </a>
+      <a class="link" href="https://adminbro.com/tutorial-custom-dashboard.html">
+        Customize dashboard
+      </a>
+    </div>
+    <h2>Enterprise</h2>
+    <a class="slack" href="https://join.slack.com/t/adminbro/shared_invite/zt-djsqxxpz-_YCS8UMtQ9Ade6DPuLR7Zw">
+      <img class="avatars" src="./images/slack-community-black-border.png" alt="slack community" />
+      <h2 class="slack-label">Join Slack Community</h2>
+    </a>
+    <a class="button blue-button" href="https://demo.adminjs.co/admin">
+      Demo
+    </a>
   </div>
 </div>
 
@@ -527,7 +577,7 @@
         </a>
         <div id="tutorials-collapsible" class="section-container collapsible-content">
           <a class="link" href="https://adminbro.com/tutorial-features.html">
-            <img src="./images/icon-bullet.svg" alt="bullet icon" />Using AdminBro features
+            <img src="./images/icon-bullet.svg" alt="bullet icon" />Using AdminJS features
           </a>
           <a class="link" href="https://adminbro.com/tutorial-custom-dashboard.html">
             <img src="./images/icon-bullet.svg" alt="bullet icon" />Customize dashboard
@@ -1026,5 +1076,25 @@
 
   $('#show-all-api-link').click(() => {
     toggleDocumentationSection('#api-collapsible')
+  });
+
+  $('#hamburger-button').click(() => {
+    document.body.style.overflow = 'hidden';
+    $('#mobile-menu').css('display', 'flex'); 
+  });
+
+  $('#menu-close-button').click(() => {
+    document.body.style.overflow = 'auto';
+    $('#mobile-menu').css('display', 'none'); 
+  });
+
+  $('#docs-menu-button').click(() => {
+    toggleDocumentationSection('#docs-menu-collapsible')
+    const chevron = $('#docs-chevron') 
+    if (chevron.css('transform') === 'none') {
+      chevron.css("transform", "rotate(180deg)");
+    } else {
+      chevron.css("transform","" );
+    }
   });
 </script>
